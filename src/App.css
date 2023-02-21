@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Dancing+Script:wght@500&family=Jost:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Dancing+Script:wght@500&family=Jost:wght@300&family=Libre+Baskerville:ital@0;1&display=swap');
 /*
 'Cinzel', serif
 'Jost, sans-serif
 'Dancing Script', cursive
+'Libre Baskerville, serif
 */
 
 
@@ -15,7 +16,8 @@ content{
   margin-right: auto;
 }
 .navBar{
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
   position: sticky;
   background-color: rgb(255, 250, 244);
 }
@@ -55,6 +57,33 @@ content{
   transition: 0.3s;
 }
 .navBar .nav-name:hover{
+  color:rgb(104, 93, 81);
+  transition: 0.3s;
+}
+.footer{
+  font-family: 'Libre Baskerville', serif;
+  background-color: rgb(255, 250, 244);
+}
+.footer-content{
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+.footer-cr{
+  padding: 15px 0;
+}
+.footer-gh{
+  padding: 15px 0;
+}
+.footer a{
+  color: black;
+}
+.footer a:hover{
   color:rgb(104, 93, 81);
   transition: 0.3s;
 }

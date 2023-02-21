@@ -10,10 +10,10 @@ export class Footer extends React.Component {
                     © Matthies Kallsen, 2023
                     </div>
                     <div className='footer-links'>
-                        <a>Impressum</a> - <a>Datenschutzerklärung</a>
+                        <a href='#imprint'>Impressum</a> - <a href='#privacy'>Datenschutzerklärung</a>
                     </div>
-                    <div>
-                        <a>Quellcode (Github)</a>
+                    <div className='footer-gh'>
+                        <a href="https://github.com/Matze15/music-portfolio">Quellcode (Github)</a>
                     </div>
                 </div>
             </div>
