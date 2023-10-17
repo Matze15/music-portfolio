@@ -34,6 +34,7 @@ const Form = () => {
 
     const response = await fetch('/api/contact', {
       method: 'POST',
+      url: './send-mail.php',
       headers: {
         'Content-Type': 'application/json',
       },
