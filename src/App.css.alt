@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Dancing+Script:wght@500&family=Jost:wght@300&family=Libre+Baskerville:ital@0;1&display=swap');
+/*
+'Cinzel', serif
+'Jost, sans-serif
+'Dancing Script', cursive
+'Libre Baskerville, serif
+*/
+
+
+body{
+  align-items: center;
+  scroll-behavior: smooth;
+}
+.content{
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navBar{
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgb(255, 250, 244);
+}
+.navBar .nav-content{
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 50px;
+  user-select: none;
+}
+.navBar ul{
+  list-style: none;
+}
+.navBar li{
+  display: inline;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.navBar .nav-name{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+
+}
+.navBar img{
+  width: 20px;
+  padding-right: 5px;
+}
+.navBar li:hover{
+  color:rgb(104, 93, 81);
+  transition: 0.3s;
+}
+.navBar .nav-name:hover{
+  color:rgb(104, 93, 81);
+  transition: 0.3s;
+}
+.footer{
+  font-family: 'Libre Baskerville', serif;
+  background-color: rgb(255, 250, 244);
+}
+.footer-content{
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+.footer-cr{
+  padding: 15px 0;
+}
+.footer-gh{
+  padding: 15px 0;
+}
+.footer a{
+  color: black;
+}
+.footer a:hover{
+  color:rgb(104, 93, 81);
+  transition: 0.3s;
+}
+.start-content{
+  display: inline-flex;
+}
+.start-bild{
+  width: 45%;
+  margin: 50px;
+}
+.start-text{
+  margin-top: 40px;
+}
+.start-text .big{
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 70px;
+}
+.start-text .small{
+  margin-top: 10px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 25px;
+  line-height: 150%;
+  text-align: justify;
+}
+
+
+.about{
+  height: 10000px;
+  border: 5px dotted blue;
+}
+.about-content{
+  margin: 60px 0;
+  border: 5px solid green;
+} 

@@ -4,7 +4,23 @@ Hörproben, Paar Bilder, (Zu person?),
 
 
 Andere Projekte:
+rumgejinxe zu anderen audios
+
+
+Buchen:
+Ich würde mich freuen, Ihre Veranstaltung musikalisch begleiten zu dürfen. 
+Hier finden Sie eine Liste mit einigen Liedern aus meinem aktuellen Repertoire, ich gehe aber auch gerne auf Ihre persönlichen Wünsche ein, schicken Sie mir einfach ihre eigene Playlist!
+Ein eigenes E-Piano kann ich bei Bereitstellung einer Transportmöglichkeit mitbringen.
+
 
 
 aufbau:
+single page app
 Kopfzeile immer sichtbar
+
+
+theming: 
+schwarz weiß/beige, bilder mit geringer sättigung o. s-w
+
+About:
+Hey, ich bin Matthies,

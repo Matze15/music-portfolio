@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import clef from './media/clef.png'
+import {scroll} from './scroll'
+
 
 export class NavBar extends React.Component {
 
@@ -8,15 +10,16 @@ export class NavBar extends React.Component {
         return(
             <div className='navBar'>
                 <div className='nav-content'>
-                <div className='nav-name' href="#root">
-                    <img alt="clef" src={clef} class='nav-clef'/>
+                <div className='nav-name' onClick={() => scroll('root')}>
+                    <img alt="clef" src={clef} className='nav-clef'/>
                     Matthies Kallsen
                     </div>
+
                 <ul>
-                    <li href="#about">Über mich</li>
-                    <li href="#buchen">Buchen</li>
-                    <li href="#proben">Hörproben</li>
-                    <li href="projekte">Projekte</li>
+                    <li onClick={() => scroll('about')}>Über mich</li>
+                    <li onClick={() => scroll('proben')}>Hörproben</li>
+                    <li onClick={() => scroll('buchen')}>Buchen</li>
+
                 </ul>
                 </div>
             </div>
