@@ -54,7 +54,7 @@ const Form = () => {
       setSubject('');
       setMessage('');
     } else {
-      alert(response)
+      console.log(response)
       //alert('Ein Fehler ist beim Senden der Nachricht aufgetreten. Bitte versuchen Sie es später erneut!');
     }
   };
