@@ -32,7 +32,7 @@ const Form = () => {
 
     // Send the form data to the PHP script
 
-    const response = await fetch('/api/contact', {
+    const response = await fetch('/api/contact/index.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
