@@ -1,96 +1,44 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-const Form = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+export const Form = () => {
+  const form = useRef();
 
-    if (!name) {
-      alert('Bitte geben Sie Ihren Namen an!');
-      return;
-    }
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    if (!email) {
-      alert('Bitte geben Sie Ihre E-Mail-Adresse an!');
-      return;
-    }
-
-    if (!subject) {
-        alert('Bitte geben Sie einen Betreff an!');
-        return;
-    }
-
-    if (!message) {
-      alert('Bitte geben Sie Ihre Nachricht ein!');
-      return;
-    }
-
-    // Send the form data to the PHP script
-
-    const response = await fetch('/api/contact/index.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        subject,
-        message,
-      }),
-    });
-
-    // Handle the response from the PHP script
-
-    if (response.ok) {
-      alert('Ihre Nachricht wurde erfolgreich gesendet!');
-      setName('');
-      setEmail('');
-      setSubject('');
-      setMessage('');
-    } else {
-      console.log(response)
-      //alert('Ein Fehler ist beim Senden der Nachricht aufgetreten. Bitte versuchen Sie es später erneut!');
-    }
+    emailjs.sendForm('service_yakmln8', 'template_6d2656p', form.current, 'BOw6uEnXiKEu3Hm2g')
+      .then((result) => {
+          form.current.reset();
+          alert("Erfolgreich gesendet!");
+      }, (error) => {
+          console.log(error.text);
+          alert("Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut oder schreiben Sie mir direkt an matthies@kallsen.net.")
+      });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Ihr Name"
-        value={name}
-        onChange={(event) => setName(event.target.value)}
+    <form ref={form} onSubmit={sendEmail}>
+      <input 
+      type="text" 
+      name="from_name" 
+      placeholder='Ihr Name'
       />
-      <input
-        type="email"
-        name="email"
-        placeholder="Ihre E-Mail-Adresse"
-        value={email}
-        onChange={(event) => setEmail(event.target.value)}
+      <input 
+      type="email" 
+      name="reply_to" 
+      placeholder='Ihre E-Mail-Adresse'
       />
-      <input
-        type="text"
-        name="subject"
-        placeholder="Betreff"
-        value={subject}
-        onChange={(event) => setSubject(event.target.value)}
+      <textarea 
+      name="message" 
+      placeholder='Ihre Nachricht'
       />
-      <textarea
-        name="message"
-        placeholder="Nachricht"
-        value={message}
-        onChange={(event) => setMessage(event.target.value)}
+      <input 
+      type="submit" 
+      value="Senden" 
       />
-      <button type="submit">Submit</button>
     </form>
   );
 };
-
-export {Form};
